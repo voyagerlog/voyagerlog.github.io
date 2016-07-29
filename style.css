@@ -2,7 +2,10 @@
 *:before,
 *:after {
   box-sizing: border-box;
-  /*outline: 1px dotted rgba(255,0,0, 0.5);*/     This is just to quickly troubleshoot.
+
+  /*This is just to quickly troubleshoot.*/
+  /*outline: 1px dotted rgba(255,0,0, 0.5);*/
+
 }
 
 html {
@@ -86,7 +89,7 @@ a:active {
 
   header {
     margin-right: 4rem;
-    padding-top: 0;
+    padding-top: .2rem;
   }
 
   h1,
