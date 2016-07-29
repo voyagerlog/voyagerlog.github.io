@@ -2,25 +2,45 @@
 *:before,
 *:after {
   box-sizing: border-box;
-  /*This is just to quickly troubleshoot.*/ }
+
+  /*This is just to quickly troubleshoot.*/
+  // outline: 1px dotted rgba(255,0,0, 0.5);
+
+}
+
 
 html {
   height: 100%;
-  font-size: 10px; }
+  font-size: 10px;
+}
+
 
 @keyframes northern {
   0% {
-    transform: translate(5%, -2%); }
+    transform: translate(5%, -2%);
+  }
+
   25% {
-    transform: translate(10%, 7%); }
+    transform: translate(10%, 7%);
+  }
+
   40% {
-    transform: rotate(-10deg); }
+    transform: rotate(-10deg);
+  }
+
   60% {
-    transform: translate(7%, -2%); }
+    transform: translate(7%, -2%);
+  }
+
   85% {
-    transform: translate(6%, 3%) rotate(12deg); }
+    transform: translate(6%, 3%) rotate(12deg);
+  }
+
   100% {
-    transform: none; } }
+    transform: none;
+  }
+}
+
 body {
   background: black;
   color: #A7A7A7;
@@ -30,12 +50,15 @@ body {
   font-size: 2rem;
   height: 100%;
   justify-content: center;
+  // padding: 4rem;
   width: 100%;
-  position: relative; }
+  position: relative;
+}
 
 /* Background
 courtesy of: http://blog.lunarlogic.io/2016/boost-your-css-animation-performance-with-repaintless-css/
 */
+
 .container {
   width: 120vw;
   height: 120vh;
@@ -44,7 +67,8 @@ courtesy of: http://blog.lunarlogic.io/2016/boost-your-css-animation-performance
   top: -1rem;
   left: -1rem;
   right: -1rem;
-  bottom: -1rem; }
+  bottom: -1rem;
+}
 
 .auroral-northern {
   position: absolute;
@@ -57,71 +81,87 @@ courtesy of: http://blog.lunarlogic.io/2016/boost-your-css-animation-performance
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  background: linear-gradient(10deg, #C72037 20%, #170A36 40%, black 70%); }
+  background: linear-gradient(10deg, #C72037 20%, #170A36 40%, black 70%);
+}
 
 /* background end */
+
+
 .content {
   display: flex;
   flex-direction: column;
   position: relative;
   padding: 2rem 4rem;
-  z-index: 100; }
+  z-index: 100;
+}
 
 h1 {
   color: #C72037;
   font-size: 2rem;
-  font-weight: normal; }
+  font-weight: normal;
+}
 
 h2 {
   color: white;
   font-size: 1.4rem;
   margin-bottom: 1rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 p {
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.4; }
+  color: rgba(255,255,255, 0.6);
+  line-height: 1.4;
+}
 
 p:first-of-type {
-  margin-bottom: 6rem; }
+  margin-bottom: 6rem;
+}
 
 ul {
   list-style-type: none;
   margin: 0 0 6rem;
-  padding-left: 0; }
+  padding-left: 0;
+}
 
 a,
 a:link,
 a:visited {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(255,255,255, 0.5);
+  color: rgba(255,255,255, 0.8);
   text-decoration: none;
-  transition: color 150ms, border 400ms; }
+  transition: color 150ms, border 400ms;
+}
 
 a:hover {
   border-bottom: 1px solid white;
-  color: white; }
+  color: white;
+}
 
 a:active {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  color: rgba(255, 255, 255, 0.8); }
+  border-bottom: 1px solid rgba(255,255,255, 0.5);
+  color: rgba(255,255,255, 0.8);
+}
+
 
 @media all and (min-width: 600px) {
   body {
-    align-items: center; }
+    align-items: center;
+  }
 
   .content {
-    flex-direction: row; }
+    flex-direction: row;
+  }
 
   header {
     margin-right: 4rem;
-    padding-top: .2rem; }
+    padding-top: .2rem;
+  }
 
   h1,
   p {
     padding-top: 0;
     margin-top: 0;
-    max-width: 50rem; } }
-
-/*# sourceMappingURL=style.css.map */
+    max-width: 50rem;
+  }
+}
