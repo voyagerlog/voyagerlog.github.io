@@ -2,25 +2,24 @@
 *:before,
 *:after {
   box-sizing: border-box;
-  /*outline: 1px dotted rgba(255,0,0, 0.5);*/
+  /*outline: 1px dotted rgba(255,0,0, 0.5);*/     This is just to quickly troubleshoot.
 }
 
 html {
-  font-size: 10px;
   height: 100%;
+  font-size: 10px;
 }
 
 body {
   background: black;
   color: #A7A7A7;
-  font-size: 2rem;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  height: 100%;
-  width: 100%;
   display: flex;
-  padding: 4rem;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 2rem;
+  height: 100%;
   justify-content: center;
-  /*align-items: center;*/
+  padding: 4rem;
+  width: 100%;
 }
 
 .content {
@@ -31,11 +30,12 @@ body {
 h1 {
   color: #C72037;
   font-size: 2rem;
+  font-weight: normal;
 }
 
 h2 {
-  font-size: 1.4rem;
   color: white;
+  font-size: 1.4rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
@@ -50,28 +50,28 @@ p:first-of-type {
 }
 
 ul {
-  padding-left: 0;
-  margin: 0 0 6rem;
   list-style-type: none;
+  margin: 0 0 6rem;
+  padding-left: 0;
 }
 
 a,
 a:link,
 a:visited {
-  color: rgba(255,255,255, 0.8);
   border-bottom: 1px solid rgba(255,255,255, 0.5);
+  color: rgba(255,255,255, 0.8);
   text-decoration: none;
   transition: color 150ms, border 400ms;
 }
 
 a:hover {
-  color: white;
   border-bottom: 1px solid white;
+  color: white;
 }
 
 a:active {
-  color: rgba(255,255,255, 0.8);
   border-bottom: 1px solid rgba(255,255,255, 0.5);
+  color: rgba(255,255,255, 0.8);
 }
 
 
