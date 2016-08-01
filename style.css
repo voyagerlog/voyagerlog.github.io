@@ -2,8 +2,7 @@
 *:before,
 *:after {
   box-sizing: border-box;
-  /*This is just to quickly troubleshoot.*/
-  outline: 1px dotted rgba(255, 0, 0, 0.5); }
+  /*This is just to quickly troubleshoot.*/ }
 
 html {
   height: 100%;
