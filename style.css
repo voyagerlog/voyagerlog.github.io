@@ -93,10 +93,6 @@ ul {
   list-style-type: none;
   margin: 0 0 6rem;
   padding-left: 0; }
-  
-  li {
-  margin-bottom: .8rem;
-}
 
 a,
 a:link,
@@ -131,7 +127,7 @@ a:active {
     margin-top: 0;
     max-width: 50rem; } }
 .website-wrapper {
-  display: block;
+  display: flex;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -141,6 +137,8 @@ a:active {
   left: 0;
   top: 0;
   bottom: 0;
-  right: 0; }
+  right: 0;
+  justify-content: center;
+  align-items: center; }
 
 /*# sourceMappingURL=style.css.map */
