@@ -135,6 +135,10 @@ input[type=text] {
     appearance: none;
     transition: border-color 150ms ease;
 
+    &:-webkit-autofill {
+        background-color: #fff;
+    }
+
     @include above-viewport(md) {
         font-size: 1.5rem;
     }

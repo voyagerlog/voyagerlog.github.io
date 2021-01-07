@@ -179,6 +179,9 @@ input[type=text] {
   appearance: none;
   transition: border-color 150ms ease;
 }
+.email-form__input:-webkit-autofill {
+  background-color: #fff;
+}
 @media screen and (min-width: 1000px) {
   .email-form__input {
     font-size: 1.5rem;
