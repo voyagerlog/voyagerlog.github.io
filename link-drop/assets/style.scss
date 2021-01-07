@@ -19,6 +19,7 @@ body {
     margin: 0;
     padding: 40px 20px 20px;
     justify-content: center;
+    height: 50vh;
 
     @include above-viewport(micro) {
         padding-top: 60px;
@@ -33,7 +34,6 @@ body {
     @include above-viewport(sm) {
         padding-top: 120px;
         padding-bottom: 120px;
-        height: 50vh;
     }
 
     @include above-viewport(md) {
