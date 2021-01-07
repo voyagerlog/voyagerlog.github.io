@@ -105,6 +105,10 @@ body {
     display: block;
     width: 100%;
     max-width: 420px;
+
+    @include above-viewport(md) {
+        max-width: 500px;
+    }
 }
 
 .email-form__input {
@@ -116,9 +120,15 @@ body {
     width: 100%;
     display: block;
     color: #444;
+
+    @include above-viewport(md) {
+        font-size: 1.5rem;
+    }
+
     
     &:focus {
         outline: none;
+        border-color: var(--color-primary);
     }
 }
 
@@ -137,6 +147,11 @@ body {
     z-index: 50;
     cursor: pointer;
     transition: background-color 150ms ease;
+
+    @include above-viewport(md) {
+        width: 46px;
+        height: 46px;
+    }
 
     svg {
         fill: var(--color-icon-check);
