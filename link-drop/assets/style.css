@@ -1,0 +1,275 @@
+:root {
+  --color-heading: #000;
+  --color-bg-1: #E6F7FF;
+  --color-bg-2: #000;
+  --color-text: #707070;
+  --color-text-tagline: #46748A;
+  --color-submit-bg-default: #838383;
+  --color-icon-check: #fff;
+  --color-primary: #FF4F00;
+  --color-icon-check: #fff;
+  --color-button-secondary: #eee;
+  --color-button-secondary-hover: var(--color-bg-1);
+  --color-icon-news: #A5A5A5;
+  --color-icon-news-hover: #42809E;
+  --typestack-default: BlinkMacSystemFont, -apple-system, "Roboto", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+[visually-hidden],
+[visually-hidden=true] {
+  position: absolute;
+  top: 0;
+  left: -5000px;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--typestack-default);
+  color: var(--color-text);
+}
+
+.header {
+  background-color: var(--color-bg-1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 40px 20px 20px;
+}
+@media screen and (min-width: 360px) {
+  .header {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .header {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .header {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .header {
+    padding-top: 150px;
+    padding-bottom: 120px;
+  }
+}
+
+.header__logo {
+  margin: 0;
+  text-align: center;
+}
+
+.header__logo svg {
+  fill: var(--color-primary);
+  width: 70%;
+  display: inline-block;
+}
+@media screen and (min-width: 360px) {
+  .header__logo svg {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .header__logo svg {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .header__logo svg {
+    width: 100%;
+  }
+}
+
+.header__description {
+  color: var(--color-text-tagline);
+  font-size: 1rem;
+  font-weight: 400;
+  max-width: 500px;
+  text-align: center;
+  padding: 10px 0;
+  line-height: 1.4;
+}
+@media screen and (min-width: 360px) {
+  .header__description {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .header__description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .header__description {
+    max-width: 550px;
+    font-size: 1.4rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -25px;
+  padding: 0 20px;
+}
+
+.email-form__wrapper {
+  position: relative;
+}
+
+.email-form {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+}
+
+.email-form__input {
+  padding: 16px 50px 16px 24px;
+  border-radius: 1000px;
+  border: none;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  width: 100%;
+  display: block;
+  color: #444;
+}
+.email-form__input:focus {
+  outline: none;
+}
+
+.email-form__button {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  border: none;
+  background-color: var(--color-submit-bg-default);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 1000px;
+  z-index: 50;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+.email-form__button svg {
+  fill: var(--color-icon-check);
+}
+.email-form__input:not(:placeholder-shown) + .email-form__button {
+  background-color: var(--color-primary);
+}
+.email-form__button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white 40%);
+  width: 20px;
+  top: -4px;
+  bottom: -4px;
+  left: -20px;
+  z-index: -1;
+}
+.email-form__button:after {
+  content: "";
+  display: block;
+  width: 2px;
+  position: absolute;
+  background-color: #ddd;
+  top: 2px;
+  bottom: 2px;
+  border-radius: 100px;
+  left: -8px;
+  z-index: 20;
+}
+
+.content__issue-link {
+  text-decoration: none;
+  display: flex;
+  color: var(--color-text);
+  background-color: var(--color-button-secondary);
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+.content__issue-link span + span {
+  margin-left: 5px;
+}
+.content__issue-link svg {
+  transition: fill 150ms ease;
+  fill: var(--color-icon-news);
+}
+.content__issue-link:hover, .content__issue-link:focus {
+  background-color: var(--color-button-secondary-hover);
+  color: var(--color-text-tagline);
+}
+.content__issue-link:hover svg, .content__issue-link:focus svg {
+  fill: var(--color-icon-news-hover);
+}
+
+.footer {
+  text-align: center;
+  margin: 60px 0 20px;
+  display: block;
+  width: 100%;
+}
+@media screen and (min-width: 800px) {
+  .footer {
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+.footer__text {
+  margin: 0 0 10px;
+}
+
+.footer__logo-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__logo:nth-of-type(1) {
+  max-height: 40px;
+}
+@media screen and (min-width: 1000px) {
+  .footer__logo:nth-of-type(1) {
+    max-height: 80px;
+  }
+}
+
+.footer__logo:nth-of-type(2) {
+  max-height: 30px;
+}
+@media screen and (min-width: 1000px) {
+  .footer__logo:nth-of-type(2) {
+    max-height: 100px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
