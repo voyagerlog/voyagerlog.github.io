@@ -171,6 +171,7 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  transition: border-color 150ms ease;
 }
 @media screen and (min-width: 1000px) {
   .email-form__input {
@@ -196,7 +197,11 @@ body {
   border-radius: 1000px;
   z-index: 50;
   cursor: pointer;
-  transition: background-color 150ms ease;
+  transition: background-color 150ms ease, transform 150ms ease;
+  transform: scale(1);
+}
+.email-form__button:hover, .email-form__button:focus {
+  transform: scale(1.125) translateX(-1px);
 }
 @media screen and (min-width: 1000px) {
   .email-form__button {
@@ -220,18 +225,6 @@ body {
   bottom: -4px;
   left: -20px;
   z-index: -1;
-}
-.email-form__button:after {
-  content: "";
-  display: block;
-  width: 2px;
-  position: absolute;
-  background-color: #ddd;
-  top: 2px;
-  bottom: 2px;
-  border-radius: 100px;
-  left: -8px;
-  z-index: 20;
 }
 
 .content__issue-link {

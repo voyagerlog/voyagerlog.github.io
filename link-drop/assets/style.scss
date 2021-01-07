@@ -127,6 +127,7 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    transition: border-color 150ms ease;
 
     @include above-viewport(md) {
         font-size: 1.5rem;
@@ -153,7 +154,14 @@ body {
     border-radius: 1000px;
     z-index: 50;
     cursor: pointer;
-    transition: background-color 150ms ease;
+    transition: background-color 150ms ease, transform 150ms ease;
+    transform: scale(1);
+
+    &:hover,
+    &:focus {
+        transform: scale(1.125) translateX(-1px);
+    }
+
 
     @include above-viewport(md) {
         width: 46px;
@@ -180,18 +188,18 @@ body {
         z-index: -1;
     }
 
-    &:after {
-        content: '';
-        display: block;
-        width: 2px;
-        position: absolute;
-        background-color: #ddd;
-        top: 2px;
-        bottom: 2px;
-        border-radius: 100px;
-        left: -8px;
-        z-index: 20;
-    }
+    // &:after {
+    //     content: '';
+    //     display: block;
+    //     width: 2px;
+    //     position: absolute;
+    //     background-color: #ddd;
+    //     top: 2px;
+    //     bottom: 2px;
+    //     border-radius: 100px;
+    //     left: -8px;
+    //     z-index: 20;
+    // }
 }
 
 .content__issue-link {
