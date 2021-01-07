@@ -108,7 +108,7 @@ body {
 .email-form__input {
     padding: 16px 50px 16px 24px;
     border-radius: 1000px;
-    border: none;
+    border: 1px solid #F3F3F3;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.10);
     font-size: 1rem;
     width: 100%;
@@ -122,8 +122,8 @@ body {
 
 .email-form__button {
     position: absolute;
-    top: 7px;
-    right: 7px;
+    top: 8px;
+    right: 8px;
     border: none;
     background-color: var(--color-submit-bg-default);
     display: flex;
