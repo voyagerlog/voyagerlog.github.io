@@ -159,6 +159,12 @@ body {
   }
 }
 
+input[type=text] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .email-form__input {
   padding: 16px 50px 16px 24px;
   border-radius: 1000px;
