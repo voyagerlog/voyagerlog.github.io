@@ -163,6 +163,9 @@ body {
   width: 100%;
   display: block;
   color: #444;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 @media screen and (min-width: 1000px) {
   .email-form__input {
